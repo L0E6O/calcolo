@@ -4,4 +4,31 @@ disp(b) %stampo b
 c=sqrt(-2) %sqrt di -2 in c
 
 %-------overflow-------
-d=exp(1.e2) %1.e2 sarebbe 10^2
+d=exp(1.e2) %1.e2 sarebbe 10^2, fa
+d=exp(1.e4) %non fa, troppo grande
+d=log(exp(1.e4)) %non fa cmq, pk fa prima l'exp e va in overflow, 
+                 % da cui non puo' recuperarsi.
+                 % in overflow da inf (infinito)
+                 %da infinito anche se divido per 0
+
+realmax %comando che visualizza la soglia di overflow
+%diviso inf fa 0
+%0/0 o inf/inf rompe tutto (da nan)
+
+realmin %visualizza il numero più piccolo rappresentabile
+
+%---------underflow----------
+%matlab esce dalla notazione standard e scende sotto al -308
+%non ho capito perché
+%la vera soglia di underflow (con denormalizzazione) è 1.e-324
+%sotto la quale, torna 0
+
+%numero più grande rappresentabile
+q=2^(2^(10)-1)
+
+%calcolo sin(pi)
+sin(pi)
+
+a=0.1 %convertito in base 2 è periodico
+
+err=a^3-1.e-3 &ì%investiga
