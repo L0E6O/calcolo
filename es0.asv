@@ -32,4 +32,4 @@ sin(pi)
 
 a=0.1 %convertito in base 2 è periodico
 
-err=a^3-1.e-3 %dimostrazione di riga sopra
+err=a^3-1.e-3 
